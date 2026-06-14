@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.M.A.R.T. Drafting Workflow™ - Mega Bundle Template Arsitek & Sipil</title>
-    <!-- Google Fonts & Tailwind CSS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,7 +17,6 @@
             }
         }
     </script>
-    <!-- Alpine.js CDN untuk handle interaksi FAQ, Tab Showcase, & Floating Button -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -27,7 +25,6 @@
 </head>
 <body class="bg-[#f8fafc] text-[#1e293b] antialiased selection:bg-emerald-500 selection:text-white" x-data="{ showFloating: false }" @scroll.window="showFloating = (window.pageYOffset > 500)">
 
-    <!-- FLOATING CTA BUTTON (Scroll Anchor to Pricing) -->
     <div class="fixed bottom-6 right-6 z-50 sm:hidden" x-show="showFloating" x-transition x-cloak>
         <a href="#pricing" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm px-5 py-3 rounded-full shadow-2xl shadow-emerald-600/40 border border-emerald-500 tracking-wide transform active:scale-95 transition-all">
             <span>Akses Sekarang</span>
@@ -37,59 +34,54 @@
         </a>
     </div>
 
-    <!-- URGENCY TOP BAR (FOMO Element) -->
     <div class="bg-red-600 text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
         🚨 Peringatan: Harga Rp 147.000 hanya berlaku untuk 50 pembeli pertama hari ini. Sisa kuota: <span class="bg-white text-red-700 px-1.5 py-0.5 rounded font-bold animate-pulse">7 Slot</span>
     </div>
 
-    <!-- SECTION 1: HERO CONTAINER -->
     <header class="relative overflow-hidden bg-white pt-16 pb-20 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <span class="inline-flex items-center gap-1.5 py-1.5 px-3.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-6 tracking-wide uppercase">
                 🚀 Kerja Cerdas Orang Teknik
             </span>
             <p class="text-base sm:text-lg md:text-xl font-medium text-slate-600 max-w-3xl mx-auto mb-4">
-                Ambil Proyek 5x Lebih Banyak Tanpa Perlu Tambah Karyawan & Begadang Tiap Malam.
+                Kerja Cerdas Orang Teknik: Ambil Proyek 5x Lebih Banyak Tanpa Perlu Tambah Karyawan & Begadang Tiap Malam.
             </p>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0f172a] tracking-tight leading-tight max-w-4xl mx-auto mb-6">
-                Berhenti Menggambar Ulang Dari Nol. <span class="text-emerald-600">Buka File, Sesuaikan, Kirim.</span>
+                Berhenti Menggambar Ulang Elemen yang Sama. <span class="text-emerald-600">Buka File, Sesuaikan, Kirim ke Klien.</span>
             </h1>
             <p class="text-sm sm:text-base md:text-lg text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
                 <span class="font-bold text-[#0f172a]">12.000+ Ultimate Pro-Library</span> AutoCAD, SketchUp, 3D Asset, & Excel RAB Otomatis — Sesuai Standar Industri & Siap Tempur dalam Hitungan Menit.
             </p>
             
-            <!-- Hero Video/Image Mockup Placeholder -->
             <div class="relative max-w-4xl mx-auto mb-12 rounded-2xl border border-slate-200 bg-slate-50 p-2 shadow-xl shadow-slate-200/50">
                 <div class="aspect-video w-full rounded-xl bg-slate-100 flex flex-col items-center justify-center border border-slate-200 text-center p-6 overflow-hidden">
                     <svg class="w-16 h-16 text-slate-400 mb-4 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
-                    <p class="text-sm font-semibold text-slate-700">[ Video / Slide Gambar Bergerak Preview Isi Pro-Library ]</p>
+                    <p class="text-sm font-semibold text-slate-700">[ Slide mockup premium berputar / video preview isi folder drive yang rapi ]</p>
                 </div>
             </div>
 
-            <!-- Main CTA Button -->
             <div class="flex flex-col items-center justify-center gap-4">
                 <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base sm:text-lg font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-xl shadow-emerald-600/20 w-full sm:w-auto tracking-wide group">
                     Amankan Pro-Library & Lihat Detail Paket
                 </a>
                 <div class="flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-500 mt-2 font-medium">
                     <span class="flex items-center gap-1.5">⚡ Sekali Bayar, Akses Selamanya</span>
-                    <span class="flex items-center gap-1.5">📂 Akses Instan via Google Drive</span>
-                    <span class="flex items-center gap-1.5">⭐ Rate Kepuasan 4.9/5.0</span>
+                    <span class="flex items-center gap-1.5">🚀 Download Bertahap via Google Drive Instan</span>
+                    <span class="flex items-center gap-1.5">🔥 9.420+ Arsitek, Drafter, & Kontraktor Telah Bergabung</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SECTION 2: SHOWCASE PREVIEW DI DALAM BUNDLE (INTERACTIVE TABS) -->
     <section class="py-16 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200" x-data="{ currentTab: 'kitchen' }">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">SHOWCASE</h3>
+            <div class="text-center mb-4">
+                <h3 class="text-xl sm:text-2xl font-bold text-[#0f172a] uppercase tracking-wide">Preview Koleksi Premium</h3>
+                <p class="text-sm text-slate-600 mt-2 max-w-xl mx-auto">Jangan Beli Kucing dalam Karung. Semua visual di bawah ini adalah render asli yang dihasilkan langsung dari file bundle yang akan Anda akses.</p>
             </div>
             
-            <!-- Tab Navigation Menu -->
             <div class="flex justify-center bg-slate-100 p-1 rounded-xl max-w-2xl mx-auto mb-8 border border-slate-200">
                 <button @click="currentTab = 'kitchen'" :class="currentTab === 'kitchen' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="flex-1 py-2.5 text-xs sm:text-sm rounded-lg transition-all uppercase tracking-wide">
                     Kitchen
@@ -105,20 +97,16 @@
                 </button>
             </div>
 
-            <!-- Main Content Card Container with Slide Arrows -->
             <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm relative group">
                 
-                <!-- Left Slide Arrow Button Placeholder -->
                 <button class="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                 </button>
 
-                <!-- Right Slide Arrow Button Placeholder -->
                 <button class="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                 </button>
 
-                <!-- TAB CONTENT 1: KITCHEN -->
                 <div x-show="currentTab === 'kitchen'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
                     <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
                         <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80" alt="Kitchen Set 21" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
@@ -130,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- TAB CONTENT 2: EKSTERIOR -->
                 <div x-show="currentTab === 'eksterior'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
                     <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Eksterior Rumah 01" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
@@ -142,7 +129,6 @@
                     </div>
                 </div>
 
-                <!-- TAB CONTENT 3: INTERIOR -->
                 <div x-show="currentTab === 'interior'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
                     <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500&q=80" alt="Interior Ruang Tamu" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
@@ -154,7 +140,6 @@
                     </div>
                 </div>
 
-                <!-- TAB CONTENT 4: BEDROOM -->
                 <div x-show="currentTab === 'bedroom'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
                     <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
                         <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=80" alt="Bedroom 01" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
@@ -167,65 +152,199 @@
                 </div>
 
             </div>
+            <p class="text-center text-xs font-semibold text-slate-400 mt-4">👉 Geser untuk melihat kualitas detail aset</p>
         </div>
     </section>
 
-    <!-- SECTION 3: AGITATION (THE PAIN POINT) -->
     <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-14">
-                <span class="text-xs font-bold text-red-700 tracking-wider uppercase bg-red-50 px-3 py-1 rounded-md border border-red-200">Siklus Melelahkan</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mt-4">Sadar atau Tidak... Anda Sedang Membakar Waktu untuk Pekerjaan Repetitif.</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] leading-tight">Sadar atau Tidak... Anda Sedang Membakar Waktu Anda untuk Pekerjaan Repetitif yang Tidak Menghasilkan Uang.</h2>
+                <p class="text-sm text-slate-600 mt-3 font-medium">Lihat apakah siklus melelahkan ini sering Anda alami:</p>
             </div>
             <div class="space-y-4">
                 <div class="bg-white border border-slate-200 rounded-xl p-6 flex gap-4 items-start shadow-sm">
                     <div class="p-2 rounded-lg bg-red-50 text-red-700 shrink-0">⏳</div>
                     <div>
                         <h4 class="text-base font-bold text-[#0f172a] mb-1">Skenario Jam 12 Malam</h4>
-                        <p class="text-sm text-slate-600">Deadline asistensi besok pagi, dan Anda masih berkutat menggambar detail tangga atau toilet dari nol. Sementara kompetitor Anda sudah tidur nyenyak sejak jam 9 malam.</p>
+                        <p class="text-sm text-slate-600">Deadline asistensi atau presentasi besok pagi, dan Anda masih berkutat menggambar detail tangga, pagar, atau toilet dari nol. Sementara kompetitor Anda yang punya library matang sudah tidur nyenyak sejak jam 9 malam.</p>
                     </div>
                 </div>
                 <div class="bg-white border border-slate-200 rounded-xl p-6 flex gap-4 items-start shadow-sm">
                     <div class="p-2 rounded-lg bg-red-50 text-red-700 shrink-0">🔍</div>
                     <div>
-                        <h4 class="text-base font-bold text-[#0f172a] mb-1">Jebakan Browser & Google</h4>
-                        <p class="text-sm text-slate-600">Menghabiskan waktu 2 jam hanya untuk mencari referensi detail struktur di internet. Begitu ketemu? Gambarnya pecah dan skalanya berantakan.</p>
+                        <h4 class="text-base font-bold text-[#0f172a] mb-1">Jebakan Pinterest & Google</h4>
+                        <p class="text-sm text-slate-600">Menghabiskan waktu 2 jam hanya untuk mencari referensi detail struktur di internet. Begitu ketemu? Gambarnya pecah, skalanya berantakan, dan Anda ragu apakah ukurannya sudah sesuai standar teknis yang aman.</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-xl p-6 flex gap-4 items-start shadow-sm">
+                    <div class="p-2 rounded-lg bg-red-50 text-red-700 shrink-0">🔄</div>
+                    <div>
+                        <h4 class="text-base font-bold text-[#0f172a] mb-1">Efek Domino Revisi Klien</h4>
+                        <p class="text-sm text-slate-600">Klien minta geser posisi pintu atau dinding, dan Anda harus mengeditnya SATU PER SATU secara manual di file denah, tampak, potongan, hingga model 3D-nya. Melelahkan dan rawan eror.</p>
+                    </div>
+                </div>
+                <div class="bg-white border border-slate-200 rounded-xl p-6 flex gap-4 items-start shadow-sm">
+                    <div class="p-2 rounded-lg bg-red-50 text-red-700 shrink-0">🛠️</div>
+                    <div>
+                        <h4 class="text-base font-bold text-[#0f172a] mb-1">Menginjak Roda yang Sama</h4>
+                        <p class="text-sm text-slate-600">Setiap ada proyek baru, Anda selalu menggambar ulang simbol material, furnitur, dan kop gambar yang SAMA. Anda tahu itu membuang waktu, tapi Anda tidak punya pilihan lain.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: COMPARISON TABLE -->
-    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-b border-slate-200">
+    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#0f172a] mb-6 leading-tight">Mengapa Arsitek Senior & Agensi Besar Bisa Menangani 10+ Proyek Sekaligus Tanpa Burnout?</h2>
+            <div class="text-sm sm:text-base text-slate-600 space-y-6 text-left leading-relaxed">
+                <p>Rahasianya sederhana: <span class="font-bold text-slate-900">Mereka tidak lebih hebat dari Anda, mereka hanya tidak menggambar dari nol.</span></p>
+                <p>Selama bertahun-tahun, mereka membangun library aset pribadi yang terorganisir. Begitu proyek masuk, mereka tinggal mengambil komponen, mengadaptasi dimensi, melakukan tweak visual, dan mengirimkannya ke klien dalam hitungan jam.</p>
+                <p>Masalahnya, mengumpulkan, memverifikasi standar, dan mengorganisasi puluhan ribu aset seperti itu sendirian butuh waktu 3 sampai 5 tahun kerja keras.</p>
+                <p class="font-semibold text-red-600">Sementara itu, tagihan dan deadline proyek Anda tidak bisa menunggu.</p>
+                <p class="text-slate-900 font-bold text-center text-lg pt-4 bg-emerald-50/50 p-4 rounded-xl border border-dashed border-emerald-300">Bagaimana jika hari ini Anda bisa langsung "membajak" seluruh library premium tersebut dan memotong 85% waktu kerja repetitif Anda?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-50 px-3 py-1 rounded border border-emerald-200">Memperkenalkan</span>
+                <h2 class="text-3xl font-extrabold text-[#0f172a] mt-3">S.M.A.R.T. Drafting Workflow™</h2>
+                <p class="text-sm text-slate-600 mt-2 max-w-xl mx-auto">Bukan sekadar tumpukan file acak. Ini adalah ekosistem kerja digital yang dirancang khusus untuk memangkas waktu produksi gambar kerja dan 3D hingga ke titik paling efisien.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
+                <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                    <span class="text-xl font-bold text-emerald-600 block mb-2">S – Search Instan</span>
+                    <p class="text-xs text-slate-600 leading-relaxed">Cari komponen yang Anda butuhkan dari 50+ kategori yang sudah tertata rapi. Selamat despised browsing berjam-jam di Google.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                    <span class="text-xl font-bold text-emerald-600 block mb-2">M – Modular Editing</span>
+                    <p class="text-xs text-slate-600 leading-relaxed">File didesain dengan sistem komponen cerdas. Edit di satu bagian, perubahan merambat secara otomatis. Hemat waktu revisi.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                    <span class="text-xl font-bold text-emerald-600 block mb-2">A – Adaptable Scale</span>
+                    <p class="text-xs text-slate-600 leading-relaxed">Format .DWG dan .SKP yang fleksibel, mudah disesuaikan dengan skala dan dimensi riil proyek lapangan Anda.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                    <span class="text-xl font-bold text-emerald-600 block mb-2">R – Ready to Present</span>
+                    <p class="text-xs text-slate-600 leading-relaxed">Dilengkapi dengan puluhan preset render siap pakai. Tinggal apply, klik render, dan hasil visual mewah langsung keluar.</p>
+                </div>
+                <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm">
+                    <span class="text-xl font-bold text-emerald-600 block mb-2">T – Technical Excellence</span>
+                    <p class="text-xs text-slate-600 leading-relaxed">Seluruh aset telah diverifikasi tim profesional agar sesuai dengan standar industri, siap cetak, dan siap diserahkan ke kontraktor/klien.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#pricing" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all shadow-xl shadow-emerald-600/20 w-full sm:w-auto tracking-wide">
+                    Saya Mau Beralih ke S.M.A.R.T. System Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-14">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">Mereka yang Sudah Berhenti Menjadi "Kuda Beban" di Depan Laptop</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-700 leading-relaxed italic">"Dulu bikin gambar kerja dan RAB rumah 2 lantai bisa makan waktu 10 hari sampai kurus begadang. Sekarang pakai S.M.A.R.T. System, 2 hari beres. Klien senang karena progressnya cepat banget!"</p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div>
+                            <h5 class="text-xs font-bold text-[#0f172a]">Ridwan Kamiludin</h5>
+                            <p class="text-[11px] text-slate-500">Kontraktor & Developer, Yogyakarta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-700 leading-relaxed italic">"Awalnya ragu karena harganya murah. Ternyata plugin SketchUp dan preset Enscape-nya langsung kepake semua. Sangat membantu saya nge-handle 4 proyek sampingan sekaligus di luar jam kantor."</p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div>
+                            <h5 class="text-xs font-bold text-[#0f172a]">Amelia Putri</h5>
+                            <p class="text-[11px] text-slate-500">Drafter Freelance & Interior Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
+                        <p class="text-sm text-slate-700 Basin-relaxed italic">"Penyelamat Studio Tugas Akhir saya. Tidak perlu pusing bikin detail struktur dari nol, tinggal adaptasi dari template ini. Dosen penguji sampai memuji kerapian gambar kerja saya."</p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200">
+                        <div>
+                            <h5 class="text-xs font-bold text-[#0f172a]">Farhan</h5>
+                            <p class="text-[11px] text-slate-500">Mahasiswa Teknik Sipil, Semester Akhir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-3xl font-bold text-[#0f172a]">Hitung-hitungan Logis Proyek</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#0f172a] leading-tight">Hitung-hitungan Logis: Pilih Cara Kerja yang Mana?</h2>
             </div>
             <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-md">
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="border-b border-slate-200 bg-slate-100">
-                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-slate-700">Aktivitas Kerja</th>
-                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-red-700 bg-red-50/60">Cara Lama</th>
-                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50/60">S.M.A.R.T. Workflow</th>
+                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-slate-700">Aktivitas Proyek (Rumah Tinggal Standar)</th>
+                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-red-700 bg-red-50/60">CARA LAMA (Konvensional)</th>
+                            <th class="p-4 text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50/60">S.M.A.R.T. WORKFLOW</th>
                         </tr>
                     </thead>
                     <tbody class="text-sm divide-y divide-slate-100 text-slate-700">
                         <tr>
-                            <td class="p-4 font-semibold text-slate-900">Bikin Gambar Denah Kerja</td>
+                            <td class="p-4 font-semibold text-slate-900">Bikin Denah & Gambar Kerja</td>
                             <td class="p-4 text-slate-600 bg-red-50/30">4 - 6 Jam (Stres dari nol)</td>
-                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">15 Menit</td>
+                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">15 Menit (Gunakan Pro-Template)</td>
                         </tr>
                         <tr>
-                            <td class="p-4 font-semibold text-slate-900">Modeling 3D & Material</td>
-                            <td class="p-4 text-slate-600 bg-red-50/30">5 - 8 Jam (Manual ribet)</td>
-                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">30 Menit</td>
+                            <td class="p-4 font-semibold text-slate-900">Cari & Verifikasi Detail Konstruksi</td>
+                            <td class="p-4 text-slate-600 bg-red-50/30">2 - 3 Jam (Browsing pecah-pecah)</td>
+                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">5 Menit (Tinggal tarik dari folder)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-900">Modeling 3D & Setting Material</td>
+                            <td class="p-4 text-slate-600 bg-red-50/30">5 - 8 Jam (Coba-coba sendiri)</td>
+                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">30 Menit (Gunakan Modular Asset)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-900">Proses Rendering & Lighting</td>
+                            <td class="p-4 text-slate-600 bg-red-50/30">2 - 3 Jam (Hasil sering zonk)</td>
+                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">15 Menit (Gunakan Pro-Preset)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-slate-900">Proses Revisi Klien</td>
+                            <td class="p-4 text-slate-600 bg-red-50/30">3 - 4 Jam (Edit manual satu-satu)</td>
+                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/30">20 Menit (File otomatis sinkron)</td>
                         </tr>
                         <tr class="border-t-2 border-slate-200 font-bold bg-slate-50">
                             <td class="p-4 text-slate-900">Total Waktu Tersita</td>
                             <td class="p-4 text-red-700 bg-red-50/60">16 - 24 Jam Kerja Keras</td>
-                            <td class="p-4 text-emerald-700 font-bold bg-emerald-50/60">~1,5 Jam Kerja Cerdas</td>
+                            <td class="p-4 text-emerald-700 bg-emerald-50/60">~1,5 Jam Kerja Cerdas</td>
+                        </tr>
+                        <tr class="font-bold bg-emerald-50/20">
+                            <td class="p-4 text-slate-900">Potensi Income Bulanan</td>
+                            <td class="p-4 text-red-700 bg-red-50/40">Maksimal 2 proyek (keburu burnout)</td>
+                            <td class="p-4 text-emerald-700 bg-emerald-50/60">Bisa handle 7-10 proyek sekaligus</td>
                         </tr>
                     </tbody>
                 </table>
@@ -233,124 +352,72 @@
         </div>
     </section>
 
-    <!-- SECTION 5: SOCIAL PROOF / TESTIMONIAL GRID -->
-    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-14">
-                <span class="text-xs font-bold text-emerald-700 tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">Bukti Nyata Lapangan</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0f172a] mt-3">Apa Kata Mereka yang Sudah Berhenti Begadang?</h2>
-                <p class="text-sm text-slate-600 mt-2 max-w-xl mx-auto">Ulasan asli dari para arsitek mandiri, drafter profesional, dan kontraktor sipil.</p>
-            </div>
-
-            <!-- Grid Testimoni -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Testi 1 -->
-                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic">"Dulu bikin satu rumah tipe 72 bisa makan waktu 3 hari cuma buat detail potongan dan saniter. Pakai library SMART, tinggal drag-and-drop komponen yang udah standar SNI. Semalam beres! Klien puas, revisi minim."</p>
-                    </div>
-                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200">
-                        <div class="w-10 h-10 bg-slate-200 rounded-full font-bold text-xs flex items-center justify-center text-slate-600">AH</div>
-                        <div>
-                            <h5 class="text-xs font-bold text-[#0f172a]">Aris Hermawan</h5>
-                            <p class="text-[11px] text-slate-500">Freelance Drafter - Bandung</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testi 2 (Highlighted) -->
-                <div class="bg-emerald-50/50 border border-emerald-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between relative">
-                    <span class="absolute -top-3 right-4 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">Paling Relate</span>
-                    <div>
-                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic font-medium">"Sebagai kontraktor, template Excel RAB otomatisnya sih yang juara. Biasanya pusing ngitung harga satuan material bolak-balik, sekarang tinggal input luas bangunan, nominal kasarnya langsung keluar akurat. Nilai proyek puluhan juta jadi kerasa gampang."</p>
-                    </div>
-                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-emerald-200">
-                        <div class="w-10 h-10 bg-emerald-200 rounded-full font-bold text-xs flex items-center justify-center text-slate-700">DP</div>
-                        <div>
-                            <h5 class="text-xs font-bold text-emerald-950">Dian Pratama</h5>
-                            <p class="text-[11px] text-slate-600">Kontraktor Hunian - Surabaya</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testi 3 -->
-                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-amber-400 mb-3 text-sm">★★★★★</div>
-                        <p class="text-sm text-slate-700 leading-relaxed italic">"Komponen 3D SketchUp sama pluginnya lengkap banget. Biasanya nyari di Pinterest dapet file corupt atau beda skala, di sini foldernya rapi per kategori (kitchen set, bathroom, interior). Sangat rekomen buat arsitek pemula yang mau ngebut."</p>
-                    </div>
-                    <div class="mt-6 flex items-center gap-3 pt-4 border-t border-slate-200">
-                        <div class="w-10 h-10 bg-slate-200 rounded-full font-bold text-xs flex items-center justify-center text-slate-600">FT</div>
-                        <div>
-                            <h5 class="text-xs font-bold text-[#0f172a]">Fitri T.</h5>
-                            <p class="text-[11px] text-slate-500">Junior Architect - Jakarta</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 6: INTERACTIVE FAQ ACCORDION -->
     <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
         <div class="max-w-3xl mx-auto" x-data="{ active: null }">
-            <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0f172a] mb-12">Pertanyaan Transparan (FAQ)</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-[#0f172a] mb-12">Pertanyaan yang Sering Muncul (Kami Jawab Secara Transparan)</h2>
             
             <div class="space-y-4">
-                <!-- FAQ 1 -->
                 <div class="border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
                     <button class="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0f172a] flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" @click="active = active === 1 ? null : 1">
-                        <span>Apakah library ini kompetibel dengan versi software lama?</span>
+                        <span>Apakah ini sama dengan aset gratisan yang bertebaran di internet?</span>
                         <span class="text-xl font-bold text-slate-400" x-text="active === 1 ? '−' : '+'"></span>
                     </button>
                     <div class="p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-slate-50" x-show="active === 1" x-collapse x-cloak>
-                        Ya, sangat kompatibel! File .DWG (AutoCAD) disimpan dalam format versi rendah (AutoCAD 2007/2010) agar bisa dibuka di semua laptop jadul sekalipun. Untuk SketchUp (.SKP), tersedia versi aset modular untuk SketchUp 2016 hingga versi terbaru 2026.
+                        Jelas beda. File gratisan di internet biasanya berantakan, skalanya tidak jelas, versinya sering corrupt, dan rawan membawa virus. Seluruh file di dalam bundle ini sudah dikurasi, diuji coba di software versi lama maupun baru, dan dikelompokkan dalam folder yang sangat rapi.
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
                     <button class="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0f172a] flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" @click="active = active === 2 ? null : 2">
-                        <span>Ukurannya puluhan GB, apakah hardisk saya bakal langsung penuh?</span>
+                        <span>Ukurannya puluhan GB, apakah hardisk saya bakal penuh?</span>
                         <span class="text-xl font-bold text-slate-400" x-text="active === 2 ? '−' : '+'"></span>
                     </button>
                     <div class="p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-slate-50" x-show="active === 2" x-collapse x-cloak>
-                        Sama sekali tidak. Sistem penyimpanan kami menggunakan Google Drive Premium yang teratur rapi per folder. Anda tidak perlu mengunduh semuanya sekaligus. Cukup unduh folder kategori yang sedang Anda butuhkan untuk proyek hari ini saja.
+                        Tidak perlu khawatir. Penyimpanan kami menggunakan Google Drive Premium. Anda tidak perlu mengunduh semuanya sekaligus. Cukup simpan link aksesnya, lalu unduh folder kategori yang sedang Anda butuhkan untuk proyek hari ini saja.
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
                     <button class="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0f172a] flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" @click="active = active === 3 ? null : 3">
-                        <span>Bagaimana mekanisme sistem Garansi 7 Hari Uang Kembali?</span>
+                        <span>Apakah ada panduan buat pemula?</span>
                         <span class="text-xl font-bold text-slate-400" x-text="active === 3 ? '−' : '+'"></span>
                     </button>
                     <div class="p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-slate-50" x-show="active === 3" x-collapse x-cloak>
-                        Kami sangat percaya diri dengan kualitas kurasi bundle ini. Jika dalam 7 hari setelah pembelian Anda merasa isi library ini berantakan atau tidak membantu memotong waktu lembur Anda, cukup hubungi CS support kami. Kami kembalikan uang Anda 100% utuh tanpa syarat rumit.
+                        Sangat ada. Kami menyertakan video panduan instalasi plugin dan cara efektif menggunakan aset agar langsung sinkron dengan alur kerja Anda, bahkan jika Anda baru semester awal kuliah.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0f172a] flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" @click="active = active === 4 ? null : 4">
+                        <span>Bagaimana dengan kompatibilitas software?</span>
+                        <span class="text-xl font-bold text-slate-400" x-text="active === 4 ? '−' : '+'"></span>
+                    </button>
+                    <div class="p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-slate-50" x-show="active === 4" x-collapse x-cloak>
+                        Format .DWG aman digunakan di AutoCAD versi 2010 sampai yang paling mutakhir. Begitu juga file .SKP yang kompatibel dengan SketchUp versi 2018 ke atas.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl bg-slate-50 overflow-hidden">
+                    <button class="w-full p-5 text-left font-bold text-sm sm:text-base text-[#0f172a] flex justify-between items-center bg-white hover:bg-slate-50 transition-colors" @click="active = active === 5 ? null : 5">
+                        <span>Bagaimana jika setelah beli ternyata saya merasa tidak cocok?</span>
+                        <span class="text-xl font-bold text-slate-400" x-text="active === 5 ? '−' : '+'"></span>
+                    </button>
+                    <div class="p-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200 bg-slate-50" x-show="active === 5" x-collapse x-cloak>
+                        Kami memberikan Garansi 7 Hari Uang Kembali 100%. Jika dalam seminggu Anda merasa isi paket ini tidak mempermudah kerja Anda, hubungi tim support kami via WhatsApp. Uang Anda kami kembalikan utuh tanpa ribet. Risiko Anda nol.
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 7: PRICING BOX -->
     <section id="pricing" class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md md:max-w-2xl mx-auto">
-            <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl mb-8 flex gap-4 items-center shadow-sm">
-                <div class="p-3 bg-emerald-100 text-emerald-700 rounded-xl shrink-0">🛡️</div>
-                <p class="text-xs sm:text-sm text-emerald-950 font-medium">
-                    <span class="font-bold">Garansi 7 Hari — Uang Kembali 100%.</span> Jika Anda merasa template ini tidak mempermudah workflow Anda, kami kembalikan uang Anda utuh.
-                </p>
-            </div>
-
-            <!-- Main Pricing Card -->
+            
             <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-emerald-600 text-white font-bold text-xs py-1 px-4 rounded-bl-xl uppercase tracking-wider">Promo Terbatas</div>
                 
-                <h4 class="text-xl sm:text-2xl font-extrabold text-[#0f172a] mb-1">Paket Lengkap S.M.A.R.T. System</h4>
-                <p class="text-xs text-slate-500 mb-6">Satu Kali Bayar. Akses Selamanya. Tanpa Biaya Bulanan Tersembunyi.</p>
+                <h4 class="text-xl sm:text-2xl font-extrabold text-[#0f172a] mb-2 leading-tight">Amankan Akses S.M.A.R.T. Drafting Workflow Hari Ini Sebelum Slot Ditutup.</h4>
+                <p class="text-xs text-slate-500 mb-6">Satu Kali Bayar. Akses Selamanya. Tanpa Biaya Berlangganan Bulanan.</p>
                 
                 <div class="flex items-baseline gap-3 mb-6">
                     <span class="text-3xl sm:text-4xl font-black text-slate-900">Rp 147.000</span>
@@ -358,21 +425,30 @@
                 </div>
 
                 <div class="border-t border-slate-100 pt-6 mb-8 space-y-3.5 text-sm text-slate-700">
-                    <p class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Yang Anda dapatkan hari ini:</p>
-                    <div class="flex gap-2.5 items-start">✔️ <span><span class="text-slate-900 font-semibold">12.000+ Pro-Template SketchUp & AutoCAD</span></span></div>
-                    <div class="flex gap-2.5 items-start">✔️ <span><span class="text-slate-900 font-semibold">Ultimate Plugin SketchUp 2016-2026</span></span></div>
-                    <div class="flex gap-2.5 items-start">✔️ <span><span class="text-slate-900 font-semibold">Automated Excel RAB Otomatis</span></span></div>
-                    <div class="flex gap-2.5 items-start bg-emerald-50 p-2.5 rounded-lg border border-emerald-200">💥 <span class="text-emerald-900 font-medium">BONUS HARI INI: Template Dokumen Surat Kontrak Hukum Kerja Proyek Arsitek & Klien</span></div>
+                    <p class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Semua yang Anda Dapatkan Hari Ini:</p>
+                    <div class="flex gap-2.5 items-start">✔️ <span>12.000+ Pro-Template SketchUp & AutoCAD <span class="text-slate-400 text-xs">(Denah, tampak, interior, eksterior, landscape — senilai Rp 1.500.000)</span></span></div>
+                    <div class="flex gap-2.5 items-start">✔️ <span>Ultimate Plugin SketchUp 2016-2026 <span class="text-slate-400 text-xs">(Fredo6, 1001 Bit Pro, S4U, Profile Builder 4, dll — senilai Rp 950.000)</span></span></div>
+                    <div class="flex gap-2.5 items-start">✔️ <span>2.000+ AutoCAD Drawing Block & Komponen Mekanikal/Elektrikal <span class="text-slate-400 text-xs">(Standar ISO/SNI — senilai Rp 750.000)</span></span></div>
+                    <div class="flex gap-2.5 items-start">✔️ <span>Automated Excel RAB & Estimasi Biaya <span class="text-slate-400 text-xs">(Tinggal input volume, harga langsung keluar otomatis — senilai Rp 600.000)</span></span></div>
+                    <div class="flex gap-2.5 items-start">✔️ <span>20 Premium Rendering Presets <span class="text-slate-400 text-xs">(Enscape, Lumion, V-Ray untuk hasil foto-realistis instan — senilai Rp 800.000)</span></span></div>
+                    <div class="flex gap-2.5 items-start bg-emerald-50 p-2.5 rounded-lg border border-emerald-200">💥 <span class="text-emerald-900 font-medium">BONUS EKSKLUSIF HARI INI: Template Dokumen Surat Kontrak Kerja Proyek antara Arsitek & Klien (Siap pakai, aman secara hukum — senilai Rp 500.000)</span></div>
+                    <div class="flex gap-2.5 items-start">🔄 <span>Free Update Selamanya & Support Teknis Live via WhatsApp</span></div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center mb-6 text-xs text-slate-500 font-medium">
+                    Total Value: <span class="line-through">Rp 5.100.000++</span> | Investasi Anda Hari Ini: <span class="text-slate-900 font-bold">Hanya Rp 147.000</span><br>
+                    <span class="italic mt-1 block">(Nilai ini akan langsung balik modal bahkan hanya dari uang muka proyek freelance pertama Anda).</span>
                 </div>
 
                 <a href="https://GANTI-DENGAN-LINK-CHECKOUT-ANDA.com" class="inline-flex items-center justify-center px-8 py-4 text-base sm:text-lg font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all w-full text-center tracking-wide shadow-xl shadow-emerald-600/20">
                     YA, SAYA MAU POTONG WAKTU LEMBUR SEKARANG
                 </a>
+                
+                <p class="text-center text-[11px] text-slate-400 mt-4">🔒 Pembayaran Aman & Instan via Gateway Resmi (Midtrans/E-Wallet/Transfer Bank)</p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="py-8 bg-slate-900 text-center text-xs text-slate-400">
         <p>&copy; 2026 S.M.A.R.T. Drafting Workflow — Ultimate Template Bundle Arsitek & Sipil. All Rights Reserved.</p>
     </footer>
