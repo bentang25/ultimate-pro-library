@@ -7,7 +7,7 @@
     <!-- Google Fonts & Tailwind CSS CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,7 +18,7 @@
             }
         }
     </script>
-    <!-- Alpine.js CDN untuk handle interaksi FAQ & Floating Button Scroll -->
+    <!-- Alpine.js CDN untuk handle interaksi FAQ, Tab Showcase, & Floating Button -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -82,34 +82,90 @@
         </div>
     </header>
 
-    <!-- SECTION 2: SHOWCASE PREVIEW DI DALAM BUNDLE -->
-    <section class="py-16 bg-[#fafbfc] px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-10">
-                <h3 class="text-xl sm:text-2xl font-bold text-[#0f172a]">Isi Lengkap Kurasi S.M.A.R.T. Drafting Library</h3>
-                <p class="text-xs sm:text-sm text-slate-500 mt-1">Folder terstruktur rapi, bebas virus, dan langsung pakai.</p>
+    <!-- SECTION 2: SHOWCASE PREVIEW DI DALAM BUNDLE (INTERACTIVE TABS) -->
+    <section class="py-16 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200" x-data="{ currentTab: 'kitchen' }">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400">SHOWCASE</h3>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-white border border-slate-200 p-4 rounded-xl text-center shadow-sm">
-                    <span class="text-2xl block mb-2">📁</span>
-                    <h5 class="text-xs font-bold text-[#0f172a] mb-1">AutoCAD Library</h5>
-                    <p class="text-[11px] text-slate-500">Detail Pondasi, Kolom, Balok, & Sanitasi Rumah Berbagai Tipe</p>
+            
+            <!-- Tab Navigation Menu -->
+            <div class="flex justify-center bg-slate-100 p-1 rounded-xl max-w-2xl mx-auto mb-8 border border-slate-200">
+                <button @click="currentTab = 'kitchen'" :class="currentTab === 'kitchen' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="flex-1 py-2.5 text-xs sm:text-sm rounded-lg transition-all uppercase tracking-wide">
+                    Kitchen
+                </button>
+                <button @click="currentTab = 'eksterior'" :class="currentTab === 'eksterior' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="flex-1 py-2.5 text-xs sm:text-sm rounded-lg transition-all uppercase tracking-wide">
+                    Eksterior
+                </button>
+                <button @click="currentTab = 'interior'" :class="currentTab === 'interior' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="flex-1 py-2.5 text-xs sm:text-sm rounded-lg transition-all uppercase tracking-wide">
+                    Interior
+                </button>
+                <button @click="currentTab = 'bedroom'" :class="currentTab === 'bedroom' ? 'bg-white text-slate-900 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800 font-medium'" class="flex-1 py-2.5 text-xs sm:text-sm rounded-lg transition-all uppercase tracking-wide">
+                    Bedroom
+                </button>
+            </div>
+
+            <!-- Main Content Card Container with Slide Arrows -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm relative group">
+                
+                <!-- Left Slide Arrow Button Placeholder -->
+                <button class="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+
+                <!-- Right Slide Arrow Button Placeholder -->
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+
+                <!-- TAB CONTENT 1: KITCHEN -->
+                <div x-show="currentTab === 'kitchen'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=500&q=80" alt="Kitchen Set 21" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">KITCHEN SET (21).skp</p>
+                    </div>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=500&q=80" alt="Kitchen Set 22" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">KITCHEN SET (22).skp</p>
+                    </div>
                 </div>
-                <div class="bg-white border border-slate-200 p-4 rounded-xl text-center shadow-sm">
-                    <span class="text-2xl block mb-2">📦</span>
-                    <h5 class="text-xs font-bold text-[#0f172a] mb-1">3D SketchUp Assets</h5>
-                    <p class="text-[11px] text-slate-500">Komponen Interior, Furniture, Kitchen Set Modern Ready Render</p>
+
+                <!-- TAB CONTENT 2: EKSTERIOR -->
+                <div x-show="currentTab === 'eksterior'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Eksterior Rumah 01" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">FASAD MINIMALIS (01).skp</p>
+                    </div>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=500&q=80" alt="Eksterior Rumah 02" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">RUMAH TROPIS (02).skp</p>
+                    </div>
                 </div>
-                <div class="bg-white border border-slate-200 p-4 rounded-xl text-center shadow-sm">
-                    <span class="text-2xl block mb-2">📊</span>
-                    <h5 class="text-xs font-bold text-[#0f172a] mb-1">Kalkulator RAB</h5>
-                    <p class="text-[11px] text-slate-500">Template Hitung Biaya & Material Otomatis Berbasis Excel</p>
+
+                <!-- TAB CONTENT 3: INTERIOR -->
+                <div x-show="currentTab === 'interior'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=500&q=80" alt="Interior Ruang Tamu" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">LIVING ROOM MODERN.skp</p>
+                    </div>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=500&q=80" alt="Interior Ruang Makan" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">DINING ROOM SCANDI.skp</p>
+                    </div>
                 </div>
-                <div class="bg-white border border-slate-200 p-4 rounded-xl text-center shadow-sm">
-                    <span class="text-2xl block mb-2">🛠️</span>
-                    <h5 class="text-xs font-bold text-[#0f172a] mb-1">Plugin SketchUp</h5>
-                    <p class="text-[11px] text-slate-500">Koleksi Ekstensi Wajib Versi 2016-2026 untuk Pemotong Alur Kerja</p>
+
+                <!-- TAB CONTENT 4: BEDROOM -->
+                <div x-show="currentTab === 'bedroom'" class="grid grid-cols-2 gap-4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100" x-cloak>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=80" alt="Bedroom 01" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">MASTER BEDROOM (01).skp</p>
+                    </div>
+                    <div class="border border-slate-100 rounded-xl overflow-hidden bg-slate-50 p-2">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=500&q=80" alt="Bedroom 02" class="w-full aspect-[4/3] object-cover rounded-lg mb-2">
+                        <p class="text-center font-bold text-slate-700 text-xs tracking-tight">KIDS BEDROOM (02).skp</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
